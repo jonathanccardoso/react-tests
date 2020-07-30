@@ -22,7 +22,13 @@
     ],
     "testMatch": [
       "<rootDir>/__tests__/**/?(*.)(spec|test).js?(x)"
-    ]
+    ],
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-dom/extend-expect"
+    ],
+    "moduleNameMapper": {
+      "^~/(.*)": "<rootDir>/src/$1"
+    }
   },
   "browserslist": {
     "production": [
@@ -37,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "@types/jest": "^26.0.7",
     "react-app-rewired": "^2.1.6"
   }
 }
